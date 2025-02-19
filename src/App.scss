@@ -1,3 +1,10 @@
+@use "../lib/theme/" as theme;
+
+body {
+  background: theme.$black-bg;
+  color: theme.$white;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

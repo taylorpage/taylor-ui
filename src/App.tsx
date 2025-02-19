@@ -1,5 +1,8 @@
 import "react";
+
+// Components
 import Button from "../lib/components/button";
+import Sidebar from "./components/sidebar";
 
 import "./App.scss";
 
@@ -7,6 +10,7 @@ function App() {
   return (
     <>
       <h1>Taylor UI</h1>
+      <Sidebar />
       <Button
         design="primary"
         label="Primary"
