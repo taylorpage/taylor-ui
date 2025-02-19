@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import formatClasses from "../../utils/formatClasses";
 
+import "./button.scss";
+
 interface ButtonProps {
   autoFocus?: boolean;
   className?: string;
-  design?: "primary" | "secondary" | "text" | undefined;
+  design?: "primary" | "secondary" | "outline" | "text" | undefined;
   disabled?: boolean;
   form?: string;
   formAction?: string;
@@ -53,7 +55,7 @@ const Button = function ({
   return (
     <button
       autoFocus={autoFocus}
-      className={formatClasses(className, design)}
+      className={formatClasses("tui-btn", className, design)}
       disabled={disabled}
       form={form}
       formAction={formAction}
