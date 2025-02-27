@@ -1,33 +1,29 @@
 import "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-import Button from "../lib/components/button";
 import Sidebar from "./components/sidebar";
+
+// Pages
+import ButtonPage from "./pages/button";
 
 import "./App.scss";
 
 function App() {
   return (
-    <>
-      <h1>Taylor UI</h1>
-      <Sidebar />
-      <Button
-        design="primary"
-        label="Primary"
-        onClick={() => console.log("click")}
-      />
-      <Button
-        design="secondary"
-        label="Secondary"
-        onClick={() => console.log("click")}
-      />
-      <Button
-        design="outline"
-        label="Outline"
-        onClick={() => console.log("click")}
-      />
-      <Button design="text" label="Text" onClick={() => console.log("click")} />
-    </>
+    <BrowserRouter>
+      <div className="app-container">
+        <div className="app-sidebar">
+          <Sidebar />
+        </div>
+        <div className="app-content">
+          <h1>test</h1>
+          <Routes>
+            <Route path="/button" element={<ButtonPage />}></Route>
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

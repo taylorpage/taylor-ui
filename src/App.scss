@@ -1,15 +1,19 @@
 @use "../lib/theme/" as theme;
 
+html,
 body {
   background: theme.$black-bg;
   color: theme.$white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -46,4 +50,28 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  justify-content: space-between;
+
+  .app-sidebar {
+    height: 100%;
+  }
+  .app-content {
+    width: 100%;
+  }
+}
+
+// Flex classes
+.flex {
+  display: flex;
+}
+
+.flex-inline {
+  display: inline-flex;
 }
